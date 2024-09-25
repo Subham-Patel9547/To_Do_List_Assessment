@@ -1,0 +1,388 @@
+/* Reset default margins, padding, and set box-sizing globally */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for buttons and input elements: removing borders and setting font properties */
+button,
+input {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Main container for the form or content area */
+.main-Div {
+  height: 80%;
+  width: 80%;
+  margin: 8% auto;
+  border-radius: 10px;
+  background-color: rgb(0, 50, 59);
+  /* Optional border for debugging purposes */
+  /* border: 2px solid red; */
+}
+
+/* Styling for the close button that appears on the top right of the form */
+.close-button {
+  position: absolute;
+  right: 10%;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  color: whitesmoke;
+  background: none;
+}
+
+/* Font styling for the close button icon */
+.close-icon {
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+}
+
+.close-icon:hover {
+  background-color: purple; /* Hover background color */
+  color: wheat; /* Optionally, change the text color on hover */
+}
+
+
+/* Header styling inside the main container */
+.main-Div h1 {
+  padding: 10px;
+  text-align: center;
+  color: whitesmoke;
+  border-radius: 10px 10px 0 0;
+  background-color: rgba(0, 0, 0, 0.404);
+  /* Optional border for debugging */
+  /* border: 2px solid green; */
+}
+
+/* Input container inside the main-Div */
+.main-Div .input-div {
+  width: 100%;
+  /* Optional border for debugging */
+  /* border: 2px solid rgb(62, 255, 4); */
+}
+
+/* Flexbox container for label and input fields */
+.main-Div .input-div .flex-div {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  /* Optional border for debugging */
+  /* border: 2px solid black; */
+}
+
+/* Label styling for input fields */
+label {
+  font-size: 25px;
+  font-weight: 500px;
+  color: whitesmoke;
+}
+
+/* Input and select dropdown styling */
+.flex-div input, select {
+  width: 340px;
+  padding: 5px;
+  color: whitesmoke;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: rgb(63, 0, 0);
+}
+
+/* Specific styling for select dropdown */
+select {
+  width: 340px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(36, 0, 0);
+}
+
+/* Option elements inside the select dropdown */
+select option {
+  background-color: rgb(63, 36, 0);
+}
+
+/* Styling for textarea (description field) */
+.description-textArea {
+  width: 90%;
+  border: none;
+  outline: none;
+  padding: 5px;
+  height: 100px;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Container for buttons at the bottom of the form */
+.main-Div .input-div .button-div {
+  padding-bottom: 10px;
+  margin: 10px 0px 0px 775px;
+}
+
+/* Buttons within the button container */
+.main-Div .input-div .button-div button {
+  margin-left: 13px;
+  padding: 5px;
+  width: 100px;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.main-Div .input-div .button-div button:hover {
+  background-color: purple; /* Hover background color */
+  color: wheat; /* Optionally, change the text color on hover */
+}
+
+
+/* --- Responsive Styling for Small Screens --- */
+@media (max-width: 768px) {
+  /* Adjust the main container size for smaller screens */
+  .main-Div {
+    margin: 40% auto;
+  }
+
+  /* Change flex-div layout to column on smaller screens */
+  .main-Div .input-div .flex-div {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+  }
+
+  /* Adjust input and select widths */
+  .flex-div input, select {
+    width: 90%;
+  }
+
+  /* Select options styling for smaller screens */
+  select option {
+    font-size: 10px;
+    width: 20px !important;
+    border: 2px solid red;
+  }
+
+  /* Adjust textarea styling for smaller screens */
+  .description-textArea {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .description-div{
+    margin-top: 10px !important;
+    margin-left: 2% !important;
+  }
+
+  /* Adjust button-div positioning on smaller screens */
+  .main-Div .input-div .button-div {
+    margin: 10px;
+    margin-left: 40px;
+  }
+}
+
+/* --- Task List Component Styles --- */
+/* Main container for task list */
+.main-taskList-div {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(48, 3, 48);
+}
+
+/* Submenu inside the task list */
+.main-taskList-div .sub-menu-div {
+  width: 95%;
+  height: 95%;
+  border: 2px solid lawngreen;
+}
+
+/* Info section inside task list */
+.main-taskList-div .taskList-info-div {
+  width: 95%;
+  display: flex;
+  color: whitesmoke;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.733);
+  /* border: 2px solid aqua; */
+  position: fixed;
+}
+
+/* Search icon styling */
+.search-icon {
+  color: rgb(194, 0, 0);
+  font-size: 35px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Icon used in the task list */
+.icon {
+  margin: 10px 0px 0px 10px;
+  font-size: 30px;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgb(110, 0, 0);
+}
+
+/* Button group inside task list */
+.group-button-div {
+  margin: 10px;
+  width: 255px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styling for task list buttons */
+.button {
+  width: 115px;
+  height: 40px;
+  color: purple;
+  border-radius: 5px;
+  background-color: wheat;
+  transition:  0.5s ease-in-out;
+}
+
+/* Hover effect for the button */
+ .button:hover {
+  background-color: purple; /* Hover background color */
+  color: wheat; /* Optionally, change the text color on hover */
+}
+
+/* Search bar input field styling */
+.search-bar-input {
+  height: 35px;
+  padding-left: 5px;
+  background: rgba(255, 255, 255, 0.685);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+/* Flexbox utility class */
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+/* Bottom info bar in task list */
+.bottom-div {
+  width: 95%;
+  bottom: 15px;
+  font-weight: bold;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid red;
+}
+
+/* Styling for bottom section icons */
+.bottom-div .bottom-icon {
+  padding-top: 5px;
+}
+
+/* --- Table Styles --- */
+/* Container for the task table */
+.table-container {
+  width: 95%;
+  height: 70%;
+  margin: 9% auto;
+  overflow-y: auto;
+  background-color: #f0f0f0;
+  position: fixed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide the scrollbar */
+.table-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styling for the table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Table header styling */
+.styled-table th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+}
+
+/* Table row and cell styling */
+.styled-table td {
+  padding: 12px;
+  border-bottom: 1px solid #000000;
+}
+
+/* Hover effect for table rows */
+.styled-table tr:hover {
+  background-color: #a1a1a1;
+}
+
+/* Alternate row background color */
+.styled-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Ellipsis for overflowed table cells */
+td:nth-last-child(2) {
+  color: red;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70px;
+}
+
+/* Button for showing tasks in the table */
+.task-show-button {
+  margin-right: -100px;
+}
+
+/* Styling for task show button */
+.task-show-button button {
+  width: 80px;
+  height: 30px;
+  font-size: 20px;
+  color: lawngreen;
+  margin-left: 10px;
+  background-color: #000000;
+}
+
+/* --- Responsive Styles for Small Screens --- */
+@media (max-width: 600px) {
+  /* Adjust table container for small screens */
+  .table-container {
+    height: 80%;
+    margin: 30% auto;
+  }
+
+  /* Center and adjust layout for bottom section */
+  .bottom-div {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Adjust button width inside bottom section */
+  .bottom-div .button-div {
+    width: 50px !important;
+  }
+}
+
