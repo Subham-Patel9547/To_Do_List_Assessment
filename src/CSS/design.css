@@ -200,7 +200,7 @@ select option {
 .main-taskList-div .sub-menu-div {
   width: 95%;
   height: 95%;
-  border: 2px solid lawngreen;
+  /*border: 2px solid lawngreen;*/
 }
 
 /* Info section inside task list */
@@ -265,7 +265,7 @@ select option {
   background: rgba(255, 255, 255, 0.685);
   margin-bottom: 10px;
   border-radius: 5px;
-  border: 1px solid rgb(0, 0, 0);
+ /* border: 1px solid rgb(0, 0, 0);*/
 }
 
 /* Flexbox utility class */
@@ -284,7 +284,7 @@ select option {
   justify-content: space-between;
   position: fixed;
   background-color: rgb(0, 0, 0);
-  border: 2px solid red;
+ /* border: 2px solid red;*/
 }
 
 /* Styling for bottom section icons */
